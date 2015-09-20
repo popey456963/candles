@@ -15,27 +15,22 @@
 </head>
 
 <body>
-
-
-
-
-
     <nav>
         <div class="nav-wrapper z-depth-3">
             <a href="index.html" class="brand-logo"><img src="images/smalllogo.png"></a>
             <ul class="right hide-on-med-and-down">
-                <li class="active"><a href="index.html">Home<i class="material-icons left">dashboard</i></a></li>
+                <li><a href="index.html">Home<i class="material-icons left">dashboard</i></a></li>
                 <li><a href="about.html">About<i class="material-icons left">info_outline</i></a></li>
                 <li><a href="shop.html">Shop<i class="material-icons left">shopping_basket</i></a></li>
-                <li><a href="basket.html">Basket (<span class="basketItems" id="basketItems">0</span>)<i class="material-icons left hide-on-small-only">shopping_cart</i></a></li>
+                <li class="active"><a href="basket.html">Basket (<span class="basketItems" id="basketItems">0</span>)<i class="material-icons left hide-on-small-only">shopping_cart</i></a></li>
 
 
             </ul>
             <ul id="slide-out" class="side-nav">
-                <li class="active"><a href="index.html">Home<i class="material-icons left hide-on-small-only">dashboard</i></a></li>
+                <li><a href="index.html">Home<i class="material-icons left hide-on-small-only">dashboard</i></a></li>
                 <li><a href="about.html">About<i class="material-icons left hide-on-small-only">info_outline</i></a></li>
                 <li><a href="shop.html">Shop<i class="material-icons left hide-on-small-only">shopping_basket</i></a></li>
-                <li><a href="basket.html">Basket (<span class="basketItems" id="basketItems">0</span>)<i class="material-icons left hide-on-small-only">shopping_cart</i></a></li>
+                <li class="active"><a href="basket.html">Basket (<span class="basketItems" id="basketItems">0</span>)<i class="material-icons left hide-on-small-only">shopping_cart</i></a></li>
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
@@ -51,42 +46,12 @@
 
     <div class="section white">
         <div class="row container">
-            <h2 class="header">Some waffle</h2>
-            <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling...</p>
+            <h2 class="header">Your Basket</h2>
+            <p class="grey-text text-darken-3 lighten-3" id="basketStuff">
+                <button onclick="loadBasketItems()">Load Basket Items</button>
+            </p>
         </div>
     </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/line.jpg"></div>
-    </div>
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header">Some waffle</h2>
-            <p class="grey-text text-darken-3 lighten-3">Plaid sustainable biodiesel, Etsy put a bird on it deep v street art viral Godard beard authentic you probably haven't heard of them crucifix cred. Meditation fap butcher, viral scenester cold-pressed pug. Neutra authentic Helvetica meggings hoodie pickled whatever master cleanse, fingerstache farm-to-table. Authentic lo-fi meditation tattooed. Scenester raw denim Portland viral butcher slow-carb, chia craft beer. Banh mi next level butcher, before they sold out fanny pack Truffaut chambray. Health goth selfies before they sold out, actually migas gastropub Banksy you probably haven't heard of them.</p>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/grass.jpg"></div>
-    </div>
-
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header">Some waffle</h2>
-            <p class="grey-text text-darken-3 lighten-3">Williamsburg locavore VHS craft beer, asymmetrical Intelligentsia pug Pitchfork listicle tattooed. Organic hashtag trust fund +1 tote bag, Echo Park four loko crucifix twee cliche shabby chic cold-pressed High Life vinyl. Lumbersexual asymmetrical gluten-free gentrify single-origin coffee, crucifix next level paleo. Cliche leggings High Life, hashtag Echo Park +1 cronut. Gastropub readymade Banksy pop-up. Tousled lomo mustache sriracha street art butcher. Cornhole iPhone skateboard, meh fap asymmetrical flexitarian street art banh mi.</p>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/grass2.jpg"></div>
-    </div>
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header">Some waffle</h2>
-            <p class="grey-text text-darken-3 lighten-3">Before they sold out slow-carb hoodie, tofu cliche small batch fap tilde Tumblr McSweeney's sustainable food truck PBR&B direct trade. Wes Anderson squid fanny pack, food truck skateboard ennui asymmetrical viral PBR Echo Park. Skateboard tote bag Intelligentsia, migas aesthetic food truck flexitarian slow-carb direct trade jean shorts actually typewriter. Selvage meditation cold-pressed, High Life raw denim narwhal literally kitsch twee Bushwick forage. Artisan Echo Park Wes Anderson, synth banjo chambray 3 wolf moon four loko heirloom cred mlkshk deep v keffiyeh. Freegan 3 wolf moon lo-fi, direct trade mustache salvia synth Tumblr asymmetrical seitan. Fanny pack direct trade Neutra, Williamsburg deep v forage cornhole fixie VHS lo-fi Blue Bottle.</p>
-        </div>
-    </div>
-    <div class="parallax-container">
-        <div class="parallax"><img src="images/vanilla.jpg"></div>
-    </div>
-
     <footer class="page-footer">
         <div class="container">
             <div class="row">
@@ -119,6 +84,7 @@
     <script src="js/jQuery.scrollSpeed.js"></script>
     <script src="js/persist-min.js"></script>
     <script src="js/persist-script.js"></script>
+    <script src="js/loadBasketItems.js"></script>
 
     <script>
         $(".button-collapse").sideNav();
