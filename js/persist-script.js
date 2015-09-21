@@ -12,7 +12,7 @@ function testFirstRun() {
         store.get(dataValue, function(ok, val) {
             if (ok) {
                 console.log(dataValue + " = " + val);
-                if (val == "null" || val == "NaN" || val == null || val == "NaN" || val == "0" || val == 0) {
+                if (val == "null" || val == "NaN" || val == null || val == "Null" || val == "0" || val == 0) {
                     store.set(items[i], 0);
                 }
             }
