@@ -1,6 +1,6 @@
 var store = new Persist.Store("DataStore");
 
-var items = ['Scented Candle', 'Diffuser', 'Tea-Light']
+var items = ['Side Log', 'Top Log', 'No Log']
 var prices = ['14.22', '12.11', '2.23']
 var data = {}
 
