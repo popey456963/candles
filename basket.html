@@ -15,7 +15,7 @@
 
 
 
-<body>
+<body onload="loadBasketItems()">
 
 
 
@@ -43,7 +43,8 @@
     <div class="section white">
         <div class="row container">
             <h2 class="header">Your Basket</h2>
-            <table>
+                <div id="tableDiv"></div>
+            <!--<table>
                 <thead>
                     <tr>
                         <th data-field="name">Item Name</th>
@@ -69,16 +70,13 @@
                         <td><b>Total: </b>£7.78</td>
                     </tr>
                 </tbody>
-            </table>
+            </table>-->
             <div class="row">
                 <div class="col s12">
                     <a class="waves-effect waves-light btn">
                         <i class="material-icons left">payment</i>Secure Checkout</a>
                 </div>
             </div>
-            <p class="grey-text text-darken-3 lighten-3" id="basketStuff">
-                <button onclick="loadBasketItems()">Load Basket Items</button>
-            </p>
         </div>
     </div>
 
