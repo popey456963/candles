@@ -6,14 +6,15 @@ var data = {}
 
 
 function testFirstRun() {
-    console.groupCollapsed("Test Run");
+    console.groupCollapsed("Test-Persist");
     for (i = 0; i < items.length; i++) {
         var dataValue = items[i]
         store.get(dataValue, function(ok, val) {
             if (ok) {
                 console.log(dataValue + " = " + val);
-                if (val == "null" || val == "NaN" || val == null || val == "Null" || val == "0" || val == 0) {
+                if (val == "null" || val == "NaN" || val == null || val == "Null") {
                     store.set(items[i], 0);
+                    console.warn("Something went wrong with " + items[i] + ".  This could just be because this is the first time the user visited the page.")
                 }
             }
         });
@@ -33,12 +34,12 @@ function updateValues() {
         var dataValue = items[i]
         store.get(dataValue, function(ok, val) {
             if (ok)
-                console.info(dataValue + ' = ' + val);
+                console.log(dataValue + ' = ' + val);
             data[dataValue] = val;
             totalItems = totalItems + parseInt(val);
         });
     }
-    console.info("Total Items = " + totalItems);
+    console.log("Total Items = " + totalItems);
 
     document.getElementById("basketItems").innerHTML = totalItems;
 

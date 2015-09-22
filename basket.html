@@ -145,7 +145,15 @@
         if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
         if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
 
+        console.groupCollapsed("Document-Information");
+        console.info('Document URL: ' + document.URL);
         console.info('Your OS: ' + OSName);
+        console.info('Document Referrer: ' + document.referrer);
+        console.info('Last Modified: ' + document.lastModified);
+        console.info('Domain: ' + document.domain);
+        console.info('Cookies Defined: ' +  document.cookie);
+        console.groupEnd();
+
         if (OSName == "Windows") {
             // $fn.scrollSpeed(step, speed, easing);
             jQuery.scrollSpeed(150, 700);
